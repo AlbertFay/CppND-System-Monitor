@@ -22,7 +22,9 @@ Processor System::Cpu(){
 vector<Process>& System::Processes() {
     for(int pid: LinuxParser::Pids()){
         Process process(pid);
+        if(!std::binary_search(processes_.begin(), processes_.end(), process)){
         processes_.push_back(process);
+        }
     }
     std::sort(processes_.begin(), processes_.end());
     return processes_;
