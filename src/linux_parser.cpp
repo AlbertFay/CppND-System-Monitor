@@ -105,6 +105,10 @@ long LinuxParser::UpTime(){
   return uptime;
 }
 
+/*
+I felt that it was easier to Parse the file and do the calculations within
+the Processor class.
+
 // TODO: Read and return the number of jiffies for the system
 long LinuxParser::Jiffies() { return 0; }
 
@@ -120,6 +124,7 @@ long LinuxParser::IdleJiffies() { return 0; }
 
 // TODO: Read and return CPU utilization
 vector<string> LinuxParser::CpuUtilization() { return {}; }
+*/
 
 // TODO: Read and return the total number of processes
 int LinuxParser::TotalProcesses(){
